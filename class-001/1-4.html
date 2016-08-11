@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery控制CSS样式</title>
+    <script language="javascript" type="text/javascript"
+            src="js/jquery.js"></script>
+    <style type="text/css">
+           .divDefalut{
+               width:260px;
+               font-size:10pt;
+               padding:5px
+           }
+           .divClick{
+               width:260px;
+               border:solid 1px #666;
+               font-size:10pt;
+               background-color:#eee;
+               padding:5px
+           }
+    </style>
+    <script type="text/javascript">
+         $(function(){
+          $(".divDefalut").click(function(){
+            $(this).toggleClass("divClick");
+          });
+         });
+    </script>
+</head>
+<body>
+    <div class="divDefalut">点击这里的会有样式变化</div>
+</body>
+</html>
