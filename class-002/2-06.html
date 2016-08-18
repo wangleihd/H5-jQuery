@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用jQuery的CSS选择器</title>
+    <script language="javascript" type="text/javascript"
+            src="js/jquery.js"></script>
+    <style type="text/css">
+           body{font-size:30px;text-align:center;}
+           div{
+               margin-left: 200px;
+               margin-top: 100px;
+           }
+           table, th, td{
+               border: 1px solid blue;
+           }
+           .myblue { color: blue;
+               background-color: #ccc;
+           }
+           .myred {
+               color: red;
+               background-color: #ccc;
+           }
+           .mygreen{
+               color: green;
+               background-color: #ccc;
+           }
+    </style>
+    <script type="text/javascript">
+            $(function(){
+                //$("div :button").addClass("mygreen");
+                $("input[type=text]").addClass("myred");
+                $(":disabled").addClass("myblue");
+                $(":checkbox").addClass("mygreen");
+                $(":header").addClass("mygreen");
+                $(":password").addClass("mygreen");
+            })
+    </script>
+</head>
+<body>
+    <div>
+        <button name="sure">确定</button>
+        <button name="cancel" disabled="true" >取消</button>
+    </div>
+
+    <div>
+        <input type="text" name="input" value="Type here">
+    </div>
+    <div>
+        喜欢H5: <input type="checkbox" value="1" >
+        <h1>北京菜鸟在线</h1>
+        <h2>H5全栈工程师</h2>
+    </div>
+    <div class="div">
+        password: <input type="password">
+    </div>
+</body>
+</html>
