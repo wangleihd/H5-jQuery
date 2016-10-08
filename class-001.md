@@ -938,7 +938,7 @@ window.onload = function () {
 而`jQuery`的`ready`事件是在DOM结构绘制完毕之后执行, 也就是说它在外部文件加载之前就执行了, 这样就能够确保网页文档的呈现和脚本初始化设置保持同步. 换句话说, 就是ready事件先于`onload`事件. 如果网页文档中没有加载外部文件, 则它们的响应时间基本上是相同的.
 见图:
 
-![](./images/dom-ready.png)
+![](./dom-ready.png)
 
 测试代码:
 
