@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+     #name {border: 1px solid red}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#name').click(function(){
+        $(this).detach();
+      });
+    });
+    </script>
+</head>
+<body>
+  <div id="all">
+    <div class="new">Richard.Wang</div>
+    <p class="new">HTML5全栈开发</p>
+    <div id="new">北京菜鸟在线</div>
+    <p id="name">请单击这里, 这一行将被删除!</p>
+  </body>
+  </div>
+
+</html>

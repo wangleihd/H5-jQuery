@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#new').click(function(){
+        $(this).remove();
+      })
+    });
+    </script>
+</head>
+<body>
+  <div id="all">
+    <div id="new">单击这里, 这一行和下面的子元素将会被删除.
+      <p class="new">HTML5全栈开发</p>
+    </div>
+    <div class="new">北京菜鸟在线</div>
+  </body>
+  </div>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var newElem1 = $('<div class="inner"></div>').css('border', '1px solid red');
+      var newElem2 = $('<div class="inner"></div>').css('border', '1px solid blue');
+      $('.new').wrap(function(index){
+        console.log(index);
+        if(index / 2){
+          return newElem1;
+        }else {
+          return newElem2;
+        }
+      });
+      $('.new').wrapInner(function(index){
+        if(index / 2){
+          return newElem1;
+        }else {
+          return newElem2;
+        }
+      })
+    });
+    </script>
+</head>
+<body>
+  <div id="all">
+    <div class="new">Richard.Wang</div>
+    <p class="new">HTML5全栈开发</p>
+    <div id="new">北京菜鸟在线</div>
+  </body>
+  </div>
+
+</html>

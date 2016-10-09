@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动效果</title>
+    <style media="screen">
+    button { float: left;}
+    div { border: 1px solid blue; background-color: blue; margin: 20px; height: 50px; width: 50px; float: left; }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('button#one').click(function(){
+          $('div').animate({
+            width: "70%",
+            opacity: 0.4,
+            marginLeft: "0.6in",
+            fontSize: "3em",
+            borderWidth: "10px"
+          },2000);
+      });
+    });
+    </script>
+</head>
+<body>
+  <button id="one">动画</button>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</body>
+</html>

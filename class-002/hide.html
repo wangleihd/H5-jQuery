@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#one').click(function(){
+        $(this).hide();
+      });
+      $('#two').click(function(){
+        $(this).hide("slow");
+        //$(this).hide(1000);
+      });
+      $('#tree').click(function(){
+        $(this).hide(1000, function(){
+          $(this).remove();
+        });
+      });
+
+    });
+    </script>
+</head>
+<body>
+  <h2>单击下面的字, 会有不同的隐藏效果.</h2>
+  <div id="one">单击这里, 马上消失!</div>
+  <div id="two">单击这里, 会一定延迟消失, 这是以毫秒为单位.</div>
+  <div id="tree">单击这里, 将会用remove真正删除元素.</div>
+
+</body>
+</html>

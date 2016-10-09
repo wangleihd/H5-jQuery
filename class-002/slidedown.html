@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动效果</title>
+    <style media="screen">
+    button { float: left;}
+    div { border: 1px solid blue; background-color: blue; margin: 20px; height: 50px; width: 50px; float: left;}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('button#one').click(function(){
+        if($('div:first').is(':hidden')){
+          $('div').slideDown(1000);
+        }else {
+          $('div').hide();
+        }
+      });
+
+    });
+    </script>
+</head>
+<body>
+  <button id="one">滑出来/消失</button>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</body>
+</html>

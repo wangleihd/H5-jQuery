@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#new").prepend('<span>教育科技有限公司</span>');
+      $(".name").prepend($('#new'));
+      $(".name").prepend(function(index, html){
+        console.log(index);
+        console.log(html);
+        return ($('.new'));
+      });
+    });
+    </script>
+</head>
+<body>
+  <div class="name">Richard.Wang</div>
+  <p class="new">HTML5全栈开发</p>
+  <div id="new">北京菜鸟在线</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var newElem = $("<div></div>").css('border', '1px solid red');
+      $('#new').wrap(newElem);
+      $('button#delete').click(function(){
+        $('#new').unwrap();
+      })
+      $('button#add').click(function(){
+        $('#new').wrap(newElem);
+      })
+    });
+    </script>
+</head>
+<body>
+  <div id="all">
+    <div class="name">Richard.Wang</div>
+    <p class="new">HTML5全栈开发</p>
+    <div id="new">北京菜鸟在线</div>
+    <button id = "delete" type="button" name="button">去掉红框</button>
+    <button id = "add" type="button" name="button">加上红框</button>
+  </body>
+  </div>
+
+</html>
