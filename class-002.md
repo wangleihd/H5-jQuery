@@ -1328,7 +1328,7 @@ $("input").prop("checked", function(index, PropertyValue){
 * attr()和prop()的两者的使用, 根据官方的建议：具有 true 和 false 两个属性的属性，如 checked, selected 或者 disabled 使用prop()，其他的使用 attr().
 具体见下表：
 
-![](../api-2/img/attr_prop.png)
+![](./attr_prop.png)
 
 ----
 
